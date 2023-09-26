@@ -27,13 +27,13 @@ const usersArray = [
 
 function GetUsersImg() {
     return(
-        <tbody>
+        <>
           {usersArray.map((user) => (
             <tr key={user.id}>
               <td><img src={user.profileImage} alt="" /></td>
             </tr>
           ))}
-        </tbody>
+        </>
     )
 }
 
