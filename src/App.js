@@ -30,7 +30,7 @@ const usersArray = [
   },
 ];
 
-function CreateTable({usersArray}) {
+function CreateTable() {
   return (
           <table className="table">
       <thead>
@@ -41,10 +41,12 @@ function CreateTable({usersArray}) {
         </tr>
       </thead>
       <tbody>
-
-          <GetUsers/>
-          <GetUsersImg />
-
+        {usersArray.map((user) => (
+          <tr key={user.id}>
+          <GetUsers user={user} />
+          <GetUsersImg user={user} />
+        </tr>
+        ))}
         </tbody>
     </table>
   );
