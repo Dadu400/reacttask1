@@ -27,22 +27,14 @@ const usersArray = [
 
 function GetUsers() {
   return (
-    <table className="table">
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Age</th>
-        </tr>
-      </thead>
       <tbody>
         {usersArray.map((user) => (
           <tr key={user.id}>
-            <td>{user.name}</td>
-            <td>{user.age}</td>
+            <td class="align-center">{user.name}</td>
+            <td class="align-center">{user.age}</td>
           </tr>
         ))}
       </tbody>
-    </table>
   );
 }
 
